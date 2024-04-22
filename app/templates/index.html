@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spam prediction</title>
+  <style>
+
+    body {
+      background-color: #f1f3f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      background-color: #f1f3f6;
+      border-radius: 16px;
+      box-shadow: 8px 8px 16px #bdc7d1, -8px -8px 16px #ffffff;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #35495e;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 20px 0;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 4px 4px 8px #bdc7d1, -4px -4px 8px #ffffff;
+    }
+
+    button {
+      background-color: #e84118;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Spam prediction</h1>
+    <form method="POST" action="/">
+      <input type="text" name="email" placeholder="e-mail">
+      <button type="submit">Valider</button>
+    </form>
+    <div id="result">{{ result }}</div>
+  </div>
+</body>
+</html>
